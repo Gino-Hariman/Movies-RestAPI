@@ -53,5 +53,5 @@ const port = process.env.PORT;
 const server = app.listen(port, () => {
   const host = server.address().address;
 
-  console.log("Example app listening at http://%s:%s", host, port);
+  console.log("Server listening at http://%s:%s", host, port);
 });
