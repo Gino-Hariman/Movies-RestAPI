@@ -1,0 +1,384 @@
+# Movie RestAPI Documentation
+
+## List Movies [/movies{?page}]
+
+### List Seluruh Movie Populer [GET]
+
++ Parameters
+    + page (optional)
+        + default: 1
+
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "page": 1,
+                "results": [
+                    {
+                        "adult": false,
+                        "backdrop_path": "/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg",
+                        "genre_ids": [
+                            14,
+                            28,
+                            12,
+                            878,
+                            53
+                        ],
+                        "id": 460465,
+                        "original_language": "en",
+                        "original_title": "Mortal Kombat",
+                        "overview": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.",
+                        "popularity": 8009.461,
+                        "poster_path": "/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg",
+                        "release_date": "2021-04-07",
+                        "title": "Mortal Kombat",
+                        "video": false,
+                        "vote_average": 7.8,
+                        "vote_count": 1959
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/inJjDhCjfhh3RtrJWBmmDqeuSYC.jpg",
+                        "genre_ids": [
+                            878,
+                            28,
+                            18
+                        ],
+                        "id": 399566,
+                        "original_language": "en",
+                        "original_title": "Godzilla vs. Kong",
+                        "overview": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages.",
+                        "popularity": 4025.879,
+                        "poster_path": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+                        "release_date": "2021-03-24",
+                        "title": "Godzilla vs. Kong",
+                        "video": false,
+                        "vote_average": 8.2,
+                        "vote_count": 5188
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/mb3fcmQzXd8aUf7r6izZfMHSJmz.jpg",
+                        "genre_ids": [
+                            28,
+                            80,
+                            53
+                        ],
+                        "id": 804435,
+                        "original_language": "en",
+                        "original_title": "Vanquish",
+                        "overview": "Victoria is a young mother trying to put her dark past as a Russian drug courier behind her, but retired cop Damon forces Victoria to do his bidding by holding her daughter hostage. Now, Victoria must use guns, guts and a motorcycle to take out a series of violent gangsters—or she may never see her child again.",
+                        "popularity": 3914.918,
+                        "poster_path": "/AoWY1gkcNzabh229Icboa1Ff0BM.jpg",
+                        "release_date": "2021-04-16",
+                        "title": "Vanquish",
+                        "video": false,
+                        "vote_average": 6.2,
+                        "vote_count": 45
+                    },
+                    ...
+                ],
+            }
+
+## Icons [/movies/trending{?type}&{time}&{page}]
+
+### List Seluruh Movie Populer [GET]
+
++ Parameters
+    + type (required)
+        + available type: all, movie, tv, person
+    + time (required)
+        + available time: day, week
+    + page (optional)
+        + default: 1
+
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                "page": 1,
+                "results": [
+                    {
+                        "title": "Tom Clancy's Without Remorse",
+                        "adult": false,
+                        "backdrop_path": "/fPGeS6jgdLovQAKunNHX8l0avCy.jpg",
+                        "id": 567189,
+                        "original_language": "en",
+                        "original_title": "Tom Clancy's Without Remorse",
+                        "poster_path": "/rEm96ib0sPiZBADNKBHKBv5bve9.jpg",
+                        "video": false,
+                        "vote_average": 7.2,
+                        "vote_count": 334,
+                        "overview": "An elite Navy SEAL uncovers an international conspiracy while seeking justice for the murder of his pregnant wife.",
+                        "release_date": "2021-04-29",
+                        "genre_ids": [
+                            28,
+                            12,
+                            53,
+                            10752
+                        ],
+                        "popularity": 503.215,
+                        "media_type": "movie"
+                    },
+                    {
+                        "video": false,
+                        "vote_average": 8,
+                        "overview": "A quirky, dysfunctional family's road trip is upended when they find themselves in the middle of the robot apocalypse and suddenly become humanity's unlikeliest last hope.",
+                        "release_date": "2021-04-22",
+                        "title": "The Mitchells vs. The Machines",
+                        "adult": false,
+                        "backdrop_path": "/5g0gisu56NsCGiMa00HWINbc25X.jpg",
+                        "genre_ids": [
+                            16,
+                            12,
+                            35,
+                            10751,
+                            878,
+                            28
+                        ],
+                        "vote_count": 140,
+                        "original_language": "en",
+                        "original_title": "The Mitchells vs. The Machines",
+                        "poster_path": "/1RjkFdP1pQrqQ3DYKuxR9JnQ5JO.jpg",
+                        "id": 501929,
+                        "popularity": 86.23,
+                        "media_type": "movie"
+                    },
+                    {
+                        "original_language": "en",
+                        "original_title": "Mortal Kombat",
+                        "poster_path": "/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg",
+                        "video": false,
+                        "vote_average": 7.8,
+                        "id": 460465,
+                        "release_date": "2021-04-07",
+                        "vote_count": 1959,
+                        "title": "Mortal Kombat",
+                        "adult": false,
+                        "backdrop_path": "/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg",
+                        "overview": "Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung's best warrior, Sub-Zero, seeks out and trains with Earth's greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.",
+                        "genre_ids": [
+                            14,
+                            28,
+                            12,
+                            878,
+                            53
+                        ],
+                    },
+                    ...
+                ],
+            }
+            
+
+## Search Movie [/movies/search/{?query}&{page}]
+
+### Search Movie by query [GET]
+
++ Parameters 
+    + query (required)
+        + example: ?query=furious
+    + page (optional)
+        + default: 1
+
++ Response 200 (application/json)   
+
+    + body 
+
+            {
+                "page": 1,
+                "results": [
+                    {
+                        "adult": false,
+                        "backdrop_path": null,
+                        "genre_ids": [
+                            28,
+                            53
+                        ],
+                        "id": 385687,
+                        "original_language": "en",
+                        "original_title": "Fast & Furious 10",
+                        "overview": "The tenth and penultimate installment of the Fast and Furious franchise.",
+                        "popularity": 256.037,
+                        "poster_path": "/2DyEk84XnbJEdPlGF43crxfdtHH.jpg",
+                        "title": "Fast & Furious 10",
+                        "video": false,
+                        "vote_average": 0,
+                        "vote_count": 0
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/vkQvqH8WQkUiNklDcbUtHEUgSNQ.jpg",
+                        "genre_ids": [
+                            28,
+                            53
+                        ],
+                        "id": 168259,
+                        "original_language": "en",
+                        "original_title": "Furious 7",
+                        "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+                        "popularity": 114.739,
+                        "poster_path": "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg",
+                        "release_date": "2015-04-01",
+                        "title": "Furious 7",
+                        "video": false,
+                        "vote_average": 7.3,
+                        "vote_count": 8295
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/qAhedRxRYWZAgZ8O8pHIl6QHdD7.jpg",
+                        "genre_ids": [
+                            28,
+                            12,
+                            35
+                        ],
+                        "id": 384018,
+                        "original_language": "en",
+                        "original_title": "Fast & Furious Presents: Hobbs & Shaw",
+                        "overview": "Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, they join forces to defeat him.",
+                        "popularity": 486.824,
+                        "poster_path": "/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg",
+                        "release_date": "2019-08-01",
+                        "title": "Fast & Furious Presents: Hobbs & Shaw",
+                        "video": false,
+                        "vote_average": 6.9,
+                        "vote_count": 4852
+                    },
+                    ...
+                ],
+            }
+## Get Movie Video [/movies/videos/{id}]
+
+### Ambil Resource Video [GET]
+
++ Parameters 
+    + id (required)
+        + example: /movies/video/168259
+
++ Response 200 (application/json)   
+
+    + body 
+
+            {
+                "id": 168259,
+                "results": [
+                    {
+                        "id": "545571c90e0a2648cb00531e",
+                        "iso_639_1": "en",
+                        "iso_3166_1": "US",
+                        "key": "Skpu5HaVkOc",
+                        "name": "Furious 7 - Official Trailer (HD)",
+                        "site": "YouTube",
+                        "size": 1080,
+                        "type": "Trailer"
+                    },
+                    {
+                        "id": "54557e1d0e0a2648c5005924",
+                        "iso_639_1": "en",
+                        "iso_3166_1": "US",
+                        "key": "0SnI1hOPLKw",
+                        "name": "The Road to Furious 7 - Fights (HD)",
+                        "site": "YouTube",
+                        "size": 360,
+                        "type": "Featurette"
+                    },
+                    {
+                        "id": "545573620e0a263863002f2f",
+                        "iso_639_1": "en",
+                        "iso_3166_1": "US",
+                        "key": "gq4_NLjA5nQ",
+                        "name": "The Road to Furious 7 (HD)",
+                        "site": "YouTube",
+                        "size": 1080,
+                        "type": "Featurette"
+                    },
+                    ...
+                ],
+            }
+## Get Movie Video [/movies/movie/recomend{?movie_id}&{page}]
+
+### Ambil Resource Video [GET]
+
++ Parameters 
+    + movie_id (required)
+        + example: /movies/recomend/168259
+    + page (optional)
+        + default: 1
+
++ Response 200 (application/json)   
+
+    + body 
+
+            {
+                 "page": 1,
+                "results": [
+                    {
+                        "adult": false,
+                        "backdrop_path": "/mRfI3y2oAd7ejur2di09xC9niqp.jpg",
+                        "genre_ids": [
+                            28,
+                            53,
+                            80
+                        ],
+                        "id": 82992,
+                        "media_type": "movie",
+                        "title": "Fast & Furious 6",
+                        "original_language": "en",
+                        "original_title": "Fast & Furious 6",
+                        "overview": "Hobbs has Dominic and Brian reassemble their crew to take down a team of mercenaries: Dominic unexpectedly gets convoluted also facing his presumed deceased girlfriend, Letty.",
+                        "popularity": 11.004,
+                        "poster_path": "/n31VRDodbaZxkrZmmzyYSFNVpW5.jpg",
+                        "release_date": "2013-05-21",
+                        "video": false,
+                        "vote_average": 6.808,
+                        "vote_count": 8599
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/lvSxooYCRuF3S2kHWXYTrcOtYco.jpg",
+                        "genre_ids": [
+                            28,
+                            53,
+                            80
+                        ],
+                        "id": 51497,
+                        "media_type": "movie",
+                        "title": "Fast Five",
+                        "original_language": "en",
+                        "original_title": "Fast Five",
+                        "overview": "Former cop Brian O'Conner partners with ex-con Dom Toretto on the opposite side of the law. Since Brian and Mia Toretto broke Dom out of custody, they've blown across many borders to elude authorities. Now backed into a corner in Rio de Janeiro, they must pull one last job in order to gain their freedom.",
+                        "popularity": 9.718,
+                        "poster_path": "/vDztZS30sheoqnJnKyO4QMnf3f8.jpg",
+                        "release_date": "2011-04-20",
+                        "video": false,
+                        "vote_average": 7.241,
+                        "vote_count": 5998
+                    },
+                    {
+                        "adult": false,
+                        "backdrop_path": "/jzdnhRhG0dsuYorwvSqPqqnM1cV.jpg",
+                        "genre_ids": [
+                            28,
+                            80,
+                            53
+                        ],
+                        "id": 337339,
+                        "media_type": "movie",
+                        "title": "The Fate of the Furious",
+                        "original_language": "en",
+                        "original_title": "The Fate of the Furious",
+                        "overview": "When a mysterious woman seduces Dom into the world of crime and a betrayal of those closest to him, the crew face trials that will test them as never before.",
+                        "popularity": 176.993,
+                        "poster_path": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg",
+                        "release_date": "2017-04-12",
+                        "video": false,
+                        "vote_average": 6.916,
+                        "vote_count": 8182
+                    },
+                    ...
+                ],
+            }
